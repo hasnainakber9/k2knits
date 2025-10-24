@@ -249,13 +249,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const placeholder = grid.querySelector('.pattern-item-placeholder');
             if(placeholder) placeholder.remove();
 
-            // Example data (replace with actual fetch from Firebase/API)
+            // === IMAGE URLS UPDATED HERE ===
             const patterns = [
-                { id: 1, name: "Balti Rose Motif", description: "Traditional floral pattern.", imageUrl: "https://lh3.googleusercontent.com/d/1A3KiO4PaYQv3uudTF4tYeOgCE8c57vpN" }, // Re-using an image
-                { id: 2, name: "Geometric Step Design", description: "Inspired by mountain ranges.", imageUrl: "https://lh3.googleusercontent.com/d/1Szg4HKTD9Q7-SMEcrnpMpicAOl0N9gU1" }, // Re-using an image
-                { id: 3, name: "Ibex Horn Symbol", description: "Cultural symbol of strength.", imageUrl: "https://lh3.googleusercontent.com/d/1A3KiO4PaYQv3uudTF4tYeOgCE8c57vpN" }, // Re-using an image
-                { id: 4, name: "Modern Abstract Weave", description: "Community innovation.", imageUrl: "https://lh3.googleusercontent.com/d/1Szg4HKTD9Q7-SMEcrnpMpicAOl0N9gU1" } // Re-using an image
+                { id: 1, name: "Balti Rose Motif", description: "Traditional floral pattern.", imageUrl: "https://lh3.googleusercontent.com/d/1A3KiO4PaYQv3uudTF4tYeOgCE8c57vpN" }, // Re-using original
+                { id: 2, name: "Geometric Step Design", description: "Buryad Mongolian Ornament.", imageUrl: "https://stock.adobe.com/images/buryad-mongolian-ornament-vector-wallpaper/530738722" }, // Updated
+                { id: 3, name: "Ibex Horn Symbol", description: "Turkish Kilim Konia Rug.", imageUrl: "https://www.pamono.eu/turkish-kilim-konia-rug-decorated-with-rams-horn-1880s?srsltid=AfmBOopb2Z2jq30e-fizqhWL24NOrayaPz38zIWuYe5bErWBdNuU8Y_l" }, // Updated
+                { id: 4, name: "Modern Abstract Weave", description: "Contemporary Tibetan Trellis.", imageUrl: "https://www.arugforallreasons.com/cdn/shop/products/contemporary-tibetan-rug-Tibetan-Trellis-_Blue-Green_large.png?v=1541964938" } // Updated
             ];
+            // === END IMAGE URLS ===
 
             patterns.forEach(pattern => {
                 const item = document.createElement('div');
