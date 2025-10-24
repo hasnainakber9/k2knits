@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K2Knits - The Living Thread</title>
+    <title>K2Knits - Weaving a Sustainable Future</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light-theme"> <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <div class="preloader">
         <div class="preloader-text">K2Knits</div>
@@ -19,131 +21,137 @@
     <div id="smooth-wrapper">
         <div id="smooth-content">
 
-            <header class="hero">
-                <div class="hero-background-video">
-                    <img src="https://lh3.googleusercontent.com/d/1D5nr1r4b0VtAieqmE4AFdV0AmwgjzpeH" alt="Cinematic landscape of Baltistan">
-                </div>
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span>Weaving</span>
-                        <span>a new</span>
-                        <span>future.</span>
-                    </h1>
-                    <p class="hero-subtitle">Preserving Baltistan's wool-weaving heritage through a living digital ecosystem.</p>
-                </div>
-                <div class="scroll-down-indicator">Scroll</div>
+            <header class="site-header">
+                <div class="header-container">
+                    <a href="#home" class="nav-logo">K2Knits</a>
+                    <nav class="main-nav">
+                        </nav>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    </div>
             </header>
 
-            <section class="problem-section">
-                <div class="problem-content">
-                    <h2 class="section-title text-reveal">A craft at risk.</h2>
-                    <p class="section-text text-reveal">In Pakistan's Baltistan region, centuries-old wool-weaving traditions are disappearing. Valuable wool is discarded as waste, and a sustainable culture faces extinction.</p>
-                </div>
-                <div class="problem-image-wrapper">
-                    <img src="https://lh3.googleusercontent.com/d/1FnjE0ePpMzkvyreAF8VFhQ40xcIYITPY" alt="Raw, unprocessed wool in a basket">
-                </div>
-            </section>
+            <main id="main-content">
 
-            <section class="solution-section">
-                <div class="solution-content">
-                    <h2 class="section-title-large">
-                        <span>From</span>
-                        <span class="text-accent">Waste</span>
-                        <span>to</span>
-                        <span class="text-accent">Weave.</span>
-                    </h2>
-                    <p class="section-text text-reveal">K2Knits transforms this challenge into an opportunity. We are building a decentralized circular economy—a dynamic digital platform that connects artisans, preserves chemical-free techniques, and creates a global marketplace for sustainable products.</p>
-                </div>
-            </section>
-
-            <section class="pillars-section">
-                <div class="pillar">
-                    <div class="pillar-icon">[P]</div>
-                    <h3>Preserve</h3>
-                    <p>Creating living documentation of weaving techniques using Ceramic Network and Livepeer—a dynamic archive owned by the community.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">[I]</div>
-                    <h3>Innovate</h3>
-                    <p>Tracking pattern evolution and enabling peer-to-peer knowledge sharing to ensure the craft evolves without losing its essence.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">[C]</div>
-                    <h3>Connect</h3>
-                    <p>A decentralized marketplace gives artisans direct access to global consumers, ensuring fair compensation and cultural authenticity.</p>
-                </div>
-            </section>
-
-            <section class="artisan-section-wrapper" data-scroll-section>
-                <div class="artisan-section-sticky">
-                    <div class="artisan-section-content">
-                        <h2 class="section-title">The Heart of the Craft</h2>
-                        <p class="section-text">Meet the artisans who are the guardians of this heritage.</p>
+                <section class="hero" id="home">
+                    <div class="hero-background">
+                        <img src="https://lh3.googleusercontent.com/d/1D5nr1r4b0VtAieqmE4AFdV0AmwgjzpeH" alt="Cinematic landscape of Baltistan">
                     </div>
-                    <div class="artisan-track">
-                        <div class="artisan-card clickable">
-                            <img src="https://lh3.googleusercontent.com/d/1A3KiO4PaYQv3uudTF4tYeOgCE8c57vpN" alt="K2Knits artisan Fatima weaving">
-                            <h4>Fatima Ahmed</h4>
-                            <p>Master Weaver</p>
+                    <div class="hero-content container reveal-up">
+                        <h1 class="hero-title">
+                            Weaving a <span class="highlight">Sustainable</span> Future.
+                        </h1>
+                        <p class="hero-subtitle">Preserving Baltistan's wool heritage through a living digital ecosystem.</p>
+                    </div>
+                    <div class="scroll-down-indicator">Scroll</div>
+                </section>
+
+                <section class="problem-section content-section">
+                    <div class="container grid md:grid-cols-2 gap-12 items-center">
+                        <div class="problem-content text-left reveal-up">
+                            <h2 class="section-title">A Craft at Risk.<br> A Resource Wasted.</h2>
+                            <p class="section-text">In Pakistan's Baltistan region, centuries-old wool-weaving traditions face extinction. Valuable indigenous wool is often discarded, losing cultural heritage and a sustainable resource.</p>
                         </div>
-                        <div class="artisan-card clickable">
-                            <img src="https://lh3.googleusercontent.com/d/1Szg4HKTD9Q7-SMEcrnpMpicAOl0N9gU1" alt="K2Knits artisan Ali at the loom">
-                            <h4>Ali Baig</h4>
-                            <p>Pattern Innovator</p>
-                        </div>
-                        <div class="artisan-card clickable">
-                            <img src="https://lh3.googleusercontent.com/d/1A3KiO4PaYQv3uudTF4tYeOgCE8c57vpN" alt="K2Knits artisan Fatima weaving">
-                            <h4>Aisha Khan</h4>
-                            <p>Community Elder</p>
-                        </div>
-                        <div class="artisan-card clickable">
-                            <img src="https://lh3.googleusercontent.com/d/1Szg4HKTD9Q7-SMEcrnpMpicAOl0N9gU1" alt="K2Knits artisan Ali at the loom">
-                            <h4>Ibrahim Zada</h4>
-                            <p>Apprentice</p>
-                        </div>
-                        <div class="artisan-card clickable">
-                            <img src="https://lh3.googleusercontent.com/d/1A3KiO4PaYQv3uudTF4tYeOgCE8c57vpN" alt="K2Knits artisan Fatima weaving">
-                            <h4>Hassan Mir</h4>
-                            <p>Natural Dyer</p>
+                        <div class="problem-image-wrapper reveal-up">
+                             <img src="https://lh3.googleusercontent.com/d/1FnjE0ePpMzkvyreAF8VFhQ40xcIYITPY" alt="Raw, unprocessed wool in a basket">
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="impact-section">
-                <h2 class="section-title text-reveal">By the Numbers</h2>
-                <div class="impact-grid">
-                    <div class="impact-stat">
-                        <h3 class="impact-number" data-target="5">0</h3>
-                        <p>+ Tons of Wool Upcycled Annually</p>
+                <section class="solution-section content-section bg-gradient">
+                    <div class="container text-center reveal-up">
+                        <h2 class="section-title-large">
+                            From <span class="text-accent-gold">Waste</span> to <span class="text-accent-teal">Weave</span>.
+                        </h2>
+                        <p class="section-text max-w-3xl mx-auto">K2Knits transforms this challenge into opportunity. We're building a decentralized circular economy—a dynamic digital platform connecting artisans, preserving techniques, and creating a global marketplace.</p>
                     </div>
-                    <div class="impact-stat">
-                        <h3 class="impact-number" data-target="50">0</h3>
-                        <p>+ Artisans Onboarded by 2025</p>
-                    </div>
-                    <div class="impact-stat">
-                        <h3 class="impact-number" data-target="70">0</h3>
-                        <p>% Women Trainees Prioritized</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <footer class="footer">
-                <h2 class="footer-title">Join the Network.</h2>
-                <p>Help us weave a sustainable future.</p>
-                <div class="footer-links">
-                    <a href="#" class="clickable">Shop the Marketplace</a>
-                    <a href="#" class="clickable">Learn About the Tech</a>
-                    <a href="#" class="clickable">Support Our Mission</a>
-                </div>
-            </footer>
+                <section class="pillars-section content-section">
+                    <div class="container max-w-5xl">
+                         <div class="text-center mb-16 reveal-up">
+                             <h2 class="section-title">The Digital Loom</h2>
+                         </div>
+                        <div class="pillars-grid">
+                            <div class="pillar-card reveal-up">
+                                <div class="pillar-icon">[P]</div>
+                                <h3>Preserve</h3>
+                                <p>Living documentation of weaving techniques using decentralized tools like Ceramic Network & Livepeer—an archive owned by the community.</p>
+                            </div>
+                            <div class="pillar-card reveal-up">
+                                <div class="pillar-icon">[I]</div>
+                                <h3>Innovate</h3>
+                                <p>Tracking pattern evolution and enabling peer-to-peer knowledge sharing via tools like Textile Threads & OrbitDB to ensure the craft evolves.</p>
+                            </div>
+                            <div class="pillar-card reveal-up">
+                                <div class="pillar-icon">[C]</div>
+                                <h3>Connect</h3>
+                                <p>A decentralized marketplace gives artisans direct access to global consumers via Radicle & Ethereum, ensuring fair compensation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        </div>
+                <section class="pattern-section content-section">
+                    <div class="container text-center reveal-up">
+                        <h2 class="section-title">The Evolving Craft</h2>
+                        <p class="section-text max-w-3xl mx-auto mb-12">Explore a living gallery of traditional and newly innovated patterns, documented and version-controlled on the decentralized web.</p>
+                        <div id="pattern-grid" class="pattern-grid">
+                            <div class="pattern-item-placeholder">Loading patterns...</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="impact-section content-section bg-gradient-alt">
+                    <div class="container text-center reveal-up">
+                        <h2 class="section-title">Measurable Impact</h2>
+                        <div class="impact-grid">
+                            <div class="impact-stat">
+                                <h3 class="impact-number" data-target="5">0</h3>
+                                <p>+ Tons of Wool Upcycled Annually</p>
+                            </div>
+                            <div class="impact-stat">
+                                <h3 class="impact-number" data-target="50">0</h3>
+                                <p>+ Artisans Onboarded (Year 1 Goal)</p>
+                            </div>
+                            <div class="impact-stat">
+                                <h3 class="impact-number" data-target="70">0</h3>
+                                <p>% Women Participants Prioritized</p>
+                            </div>
+                             <div class="impact-stat">
+                                <h3 class="impact-number" data-target="15">0</h3>
+                                <p>+ Techniques Documented</p>
+                            </div>
+                        </div>
+                         <p class="impact-note reveal-up">Leveraging technology to preserve culture and promote sustainability.</p>
+                    </div>
+                </section>
+
+                <footer class="footer">
+                     <div class="container text-center">
+                        <h2 class="footer-title reveal-up">Join the Network.</h2>
+                        <p class="footer-subtitle reveal-up">Help us weave a sustainable future, rooted in heritage.</p>
+                        <div class="footer-links reveal-up">
+                            <a href="#" class="btn btn-primary">Explore Marketplace (Soon)</a>
+                            <a href="#" class="btn btn-secondary">Learn About the Tech</a>
+                            <a href="#" class="btn btn-secondary">Support Our Mission</a>
+                        </div>
+                        <p class="footer-copy reveal-up">&copy; 2025 K2Knits. All rights reserved.</p>
+                    </div>
+                </footer>
+
+            </main> </div> </div> <div class="accessibility-controls" hidden>
+       <button id="motion-toggle-acc" aria-label="Toggle animations">Motion</button>
+       {/* Add more controls as needed */}
     </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.45/dist/lenis.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
