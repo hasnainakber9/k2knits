@@ -1,0 +1,474 @@
+/* ---------------------------------- */
+/* 1. RESET & ROOT VARIABLES
+/* ---------------------------------- */
+:root {
+    --font-serif: 'Lora', serif;
+    --font-sans: 'Inter', sans-serif;
+
+    --color-light: #F8F5F0; /* Raw Wool */
+    --color-dark: #2C2A29;  /* Deep Earth */
+    --color-accent: #8D7B68; /* Woven Thread */
+    --color-tech: #00FFFF;   /* Digital Cyan */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: none;
+}
+
+/* Hide default scrollbar */
+html {
+    scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+/* Lenis smooth scroll fix */
+html.lenis {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-dark);
+}
+
+p {
+    max-width: 65ch;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------------------------------- */
+/* 2. PRELOADER & CURSOR
+/* ---------------------------------- */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-light);
+    display: grid;
+    place-items: center;
+    z-index: 10000;
+}
+
+.preloader-text {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    will-change: transform;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-dark);
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(44, 42, 41, 0.5);
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+
+/* Cursor hover state */
+.cursor-hover .cursor-dot {
+    background-color: var(--color-light);
+}
+.cursor-hover .cursor-outline {
+    width: 60px;
+    height: 60px;
+    border-color: var(--color-tech);
+    background-color: rgba(0, 255, 255, 0.2);
+}
+
+/* ---------------------------------- */
+/* 3. LAYOUT & SECTIONS
+/* ---------------------------------- */
+section {
+    width: 100%;
+    padding: 10vh 8vw;
+    display: grid;
+    place-items: center;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-title-large {
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: 1;
+    text-align: center;
+}
+
+.section-title-large span {
+    display: block;
+}
+
+.section-text {
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+/* ---------------------------------- */
+/* 4. HERO SECTION
+/* ---------------------------------- */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    color: var(--color-light);
+    overflow: hidden;
+}
+
+.hero-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-background-video img,
+.hero-background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: clamp(3.5rem, 12vw, 10rem);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--color-light);
+}
+
+/* For the GSAP stagger animation */
+.hero-title span {
+    display: block;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.hero-title span > span {
+    display: block;
+}
+
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 40ch;
+    margin-top: 1rem;
+    color: rgba(248, 245, 240, 0.9);
+}
+
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+
+/* ---------------------------------- */
+/* 5. PROBLEM & SOLUTION SECTIONS
+/* ---------------------------------- */
+.problem-section {
+    background-color: var(--color-light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.problem-content {
+    text-align: left;
+}
+.problem-content .section-title,
+.problem-content .section-text {
+    text-align: left;
+}
+
+.problem-image-wrapper {
+    width: 100%;
+    height: 70vh;
+}
+.problem-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.solution-section {
+    min-height: 90vh;
+    background-color: var(--color-dark);
+}
+
+.solution-section h2,
+.solution-section p {
+    color: var(--color-light);
+}
+
+.solution-section .text-accent {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+/* ---------------------------------- */
+/* 6. PILLARS SECTION
+/* ---------------------------------- */
+.pillars-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.pillar {
+    text-align: center;
+}
+
+.pillar-icon {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+.pillar h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+/* ---------------------------------- */
+/* 7. ARTISANS (HORIZONTAL SCROLL)
+/* ---------------------------------- */
+/* Wrapper sets the total height for pinning */
+.artisan-section-wrapper {
+    height: 300vh; /* This height determines scroll duration. Adjust as needed. */
+    padding: 0;
+    position: relative;
+}
+
+/* Sticky container holds the content and is pinned */
+.artisan-section-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 10vh 8vw;
+}
+
+.artisan-section-content {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+/* This track will move horizontally */
+.artisan-track {
+    display: flex;
+    gap: 3rem;
+    width: max-content; /* Critical for horizontal scroll */
+    position: relative;
+    padding: 2rem 0;
+}
+
+.artisan-card {
+    width: 30vw; /* Adjust card width */
+    max-width: 400px;
+    flex-shrink: 0;
+    background: var(--color-light);
+    border: 1px solid rgba(44, 42, 41, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.artisan-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(44, 42, 41, 0.1);
+}
+
+.artisan-card img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.artisan-card h4,
+.artisan-card p {
+    padding: 0.5rem 1.5rem;
+}
+.artisan-card h4 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+.artisan-card p {
+    color: var(--color-accent);
+    padding-bottom: 1.5rem;
+}
+
+
+/* ---------------------------------- */
+/* 8. IMPACT SECTION
+/* ---------------------------------- */
+.impact-section {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+}
+
+.impact-section .section-title {
+    color: var(--color-light);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.impact-number {
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 500;
+    color: var(--color-light);
+    line-height: 1;
+}
+
+.impact-stat p {
+    font-size: 1.1rem;
+    color: rgba(248, 245, 240, 0.9);
+    margin: 0 auto;
+}
+
+/* ---------------------------------- */
+/* 9. FOOTER
+/* ---------------------------------- */
+.footer {
+    min-height: 60vh;
+    background: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+}
+
+.footer-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--color-light);
+}
+
+.footer p {
+    color: var(--color-accent);
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+.footer-links {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-light);
+    border: 1px solid var(--color-accent);
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+}
+
+/* ---------------------------------- */
+/* 10. RESPONSIVENESS
+/* ---------------------------------- */
+@media (max-width: 768px) {
+    .problem-section {
+        grid-template-columns: 1fr;
+    }
+    .problem-image-wrapper {
+        height: 50vh;
+        grid-row: 1; /* Move image to top */
+    }
+    .problem-content {
+        text-align: center;
+    }
+    .problem-content .section-title,
+    .problem-content .section-text {
+        text-align: center;
+    }
+
+    .artisan-card {
+        width: 60vw; /* Make cards wider on mobile */
+    }
+}
